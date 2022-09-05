@@ -46,13 +46,12 @@ namespace Counter
         private void dispatcherTimer_Tick(object sender, EventArgs e)
         {
             s_counter ++;
-            seconds.Text = s_counter.ToString();
             if (s_counter > 59)
             {
                 m_counter++;
                 s_counter = 0;
             }
-
+            seconds.Text = s_counter.ToString();
             minute.Text = m_counter.ToString();
 
         }
